@@ -5,9 +5,7 @@ Azure passport plugin for egg
 
 ## Install
 
-```bash
-$ npm i egg-passport-Azure --save
-```
+Download the project. And put in to ../lib/plugin
 
 ## Usage
 
@@ -15,7 +13,7 @@ $ npm i egg-passport-Azure --save
 // config/plugin.js
 exports.passportAzureAd = {
   enable: true,
-  package: 'egg-passport-weibo',
+  path: '../lib/plugin/egg-passport-azure-ad',
 };
 ```
 
@@ -26,6 +24,7 @@ exports.passportAzureAd = {
 exports.passporAzureAd = {
   key: 'your oauth key',
   secret: 'your oauth secret',
+  callbackURL: 'http://localhost:3000/passport/azuread/callback'
 };
 ```
 
