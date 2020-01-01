@@ -31,7 +31,7 @@ module.exports = app => {
   });
   // 这个函数是从session反查到用户用的。eggjs自动逻辑在前端写入cookie字段。每次访问会带上这个cookie。服务器根据这个cookie判断是谁，然后根据deserializeUser找到用户。
   app.passport.deserializeUser(async (ctx, user) => {
-    return user.id;
+    return user;
   });
 
   // must require `req` params

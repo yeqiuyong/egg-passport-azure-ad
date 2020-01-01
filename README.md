@@ -11,9 +11,11 @@ Download the project. And put in to ../lib/plugin
 
 ```js
 // config/plugin.js
+const path = require('path');
+
 exports.passportAzureAd = {
   enable: true,
-  path: '../lib/plugin/egg-passport-azure-ad',
+  path: path.join(__dirname, '../lib/plugin/egg-passport-azure-ad'),
 };
 ```
 
